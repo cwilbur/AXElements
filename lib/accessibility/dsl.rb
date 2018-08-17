@@ -44,7 +44,7 @@ module Accessibility::DSL
     # should be able to just call super, but there is a bug in MacRuby (#1320)
     # so we just recreate what should be happening
     message = "undefined method `#{meth}' for #{self}:#{self.class}"
-    raise NoMethodError, message, caller(1)
+    raise NoMethodError, message, caller
   end
 
   ##
